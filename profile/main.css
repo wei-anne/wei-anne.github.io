@@ -9,6 +9,19 @@ header {
   justify-content: center;
 }
 
+@media (max-width: 1100px) {
+  .page {
+    grid-template-columns: 3% 94% 3% !important;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .education {
+    display: none;
+  }
+}
 body {
   display: flex;
   justify-content: center;
