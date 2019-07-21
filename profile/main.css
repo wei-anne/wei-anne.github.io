@@ -1,0 +1,122 @@
+.skills, .dividingLine, header {
+  margin-top: 50px;
+  margin-left: 70px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background: linear-gradient(0deg, #e6e6e6, #fafafa) repeat-x;
+  font-family: "Microsoft JhengHei", serif;
+}
+
+.page {
+  background-color: #fff;
+  width: 85%;
+  display: grid;
+  grid-template-columns: 28% 72%;
+}
+
+.sidebar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+}
+
+header img {
+  border-radius: 50%;
+  max-width: 150px;
+}
+header .name {
+  padding-top: 10px;
+}
+header .name p {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 0;
+}
+header .name h4 {
+  margin: 0 0;
+}
+header .contact {
+  font-size: 20px;
+  padding-top: 20px;
+}
+header .contact a {
+  text-decoration: none;
+  color: black;
+}
+header .contact a:hover {
+  color: pink;
+}
+header .contact p {
+  margin: 0 0;
+}
+
+.dividingLine {
+  height: 1px;
+  background-color: #e6e6e6;
+  top: 0.45em;
+  width: 200px;
+}
+
+.skills {
+  font-family: "Quattrocento Sans", sans-serif;
+}
+.skills ul {
+  list-style: none;
+  line-height: 2;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+.mainContent a {
+  height: 500px;
+  text-decoration: none;
+  color: black;
+  font-family: "Quattrocento Sans", sans-serif;
+}
+.mainContent a:hover {
+  border: #e6e6e6 1px solid;
+  border-radius: 8%;
+}
+.mainContent a div {
+  margin-top: 25px;
+  margin-left: 15px;
+}
+.mainContent a img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  -webkit-box-shadow: 3px 3px 5px #e6e6e6;
+  -moz-box-shadow: 3px 3px 5px #e6e6e6;
+  box-shadow: 3px 3px 5px #e6e6e6;
+}
+.mainContent .education {
+  height: 500px;
+}
+.mainContent .education section {
+  white-space: pre;
+  margin-top: 200px;
+  text-align: right;
+  margin-right: 70px;
+}
+.mainContent .education section span {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=main.css.map */
