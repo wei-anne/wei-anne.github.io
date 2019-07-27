@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>moving-circle</title>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx1 = canvas.getContext("2d")
+        let ctx2 = canvas.getContext("2d")
+        let ctx3 = canvas.getContext("2d")
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+
+        function drawCtx1 (x) {
+            ctx1.clearRect(x,200,200,200);
+            ctx1.beginPath();
+            ctx1.fillStyle = "pink";
+            ctx1.arc(x,300,15,0,Math.PI*2);
+            ctx1.fill();
+            x -= 2;
+            setTimeout("drawCtx1(" + x + ")", 1000);
+        }
+
+        function drawCtx2 (y) {
+            ctx2.clearRect(100,y,300,-200);
+            ctx2.beginPath();
+            ctx2.fillStyle = "gray";
+            ctx2.arc(300,y,12,0,Math.PI*2);
+            ctx2.fill();
+            y += 1;
+            setTimeout("drawCtx2(" + y + ")", 1000);
+        }
+        
+        function drawCtx3 (x,y) {
+            ctx3.clearRect(x-100,y-100,200,200);
+            ctx3.beginPath();
+            ctx3.fillStyle = "yellow";
+            ctx3.arc(x,y,10,0,Math.PI*2);
+            ctx3.fill();
+            x += 3/Math.sqrt(2);
+            y -= 3/Math.sqrt(2);
+            setTimeout("drawCtx3(" + x + "," + y + ")", 1000)
+        }
+
+        setTimeout("drawCtx1(" + canvas.width + ")", 0);
+        setTimeout("drawCtx2(" + 0 + ")", 5000);
+        setTimeout("drawCtx3(" + 0 + "," + canvas.height + ")", 10000);
+
+    </script>
+</body>
+</html>
